@@ -14,7 +14,7 @@ If you find an issue, please [let us know](../..//issues)!
 ## Setup
 
 ```bash
-git clone https://github.com/NVIDIA-AI-IOT/jetcam
+git clone https://github.com/manmaha/jetcam
 cd jetcam
 sudo python3 setup.py install
 ```
@@ -27,7 +27,7 @@ Below we show some usage examples.  You can find more in the [notebooks](noteboo
 
 ### Create CSI camera
 
-Call ``CSICamera`` to use a compatible CSI camera.  ``capture_width``, ``capture_height``, and ``capture_fps`` will control the capture shape and rate that images are aquired.  ``width`` and ``height`` control the final output shape of the image as returned by the ``read`` function.
+Call ``CSICamera`` to use a compatible CSI camera.  ``capture_width``, ``capture_height``, and ``capture_fps`` will control the capture shape and rate that images are aquired.  ``width`` and ``height`` control the final output shape of the image as returned by the ``read`` function. ``capture_flip`` will flip the image as per g-streamer - default for RPi camera is 2 (180 degree flip)
 
 ```python
 from jetcam.csi_camera import CSICamera
